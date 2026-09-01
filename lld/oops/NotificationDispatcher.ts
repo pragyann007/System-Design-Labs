@@ -1,3 +1,18 @@
+// Task 2: Inheritance vs. Composition (Notification Service)
+// Goal: Learn when to use class inheritance and when to use interface composition to avoid rigid class hierarchies.
+
+// Problem Statement: Build a flexible notification dispatcher.
+
+// Requirements:
+
+// Define an interface NotificationChannel with a method send(recipient: string, message: string): Promise<boolean>.
+
+// Create concrete implementations: EmailChannel, SMSChannel, and PushChannel.
+
+// Create a NotificationService class that accepts an array/list of NotificationChannel instances via dependency injection (constructor).
+
+// Add a notifyAll(recipient: string, message: string) method on NotificationService that iterates through all registered channels and dispatches the message.
+
 interface NotificationChannel {
     send(recipient: string, message: string): Promise<boolean>;
 }
